@@ -13,8 +13,8 @@ const createApp = ({ dbModel }) => {
   app.use(corsMiddleware());
 
   // ------------ Endpoints ------------
-  app.use("/products", createProductRouter({ dbModel }));
-  app.use("/categories", createCategoryRouter({ dbModel }));
+  app.use("/products", createProductRouter({ productModel: dbModel.product }));
+  app.use("/categories", createCategoryRouter({ categoryModel: dbModel.category }));
 
   // ------------ Start server ------------
   app.listen(PORT, () =>
