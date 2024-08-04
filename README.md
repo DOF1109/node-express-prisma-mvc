@@ -15,9 +15,6 @@ npm i cors -E
 - Zod for validation
 npm i zod -E
 
-- mysql2
-npm i mysql2 -E
-
 - Prisma as ORM
 npm i prisma -D -E
 npx prisma init
